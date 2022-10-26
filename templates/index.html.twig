@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Secret Server{% endblock %}
+{% block body %}
+    <style>
+    a { display: block; margin: auto; padding: 10px; background-color: cornflowerblue; color: white; text-decoration: none; margin-top: 15px;
+     width: 550px; text-align: center;}
+    </style>
+    {{ form(getSecretForm) }}
+    <a href="secret">Add new Secret</a>
+{% endblock %}

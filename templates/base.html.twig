@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <style>
+            form, .secretFormMessage { background-color: #f2f2f2; margin: auto; border-radius: 25px; padding: 30px; margin-top: 25px; }
+            form { width: 550px; }
+            input, button, select { width: -webkit-fill-available; border-radius: 25px; padding: 8px; margin: 5px;  }
+            input, button { background-color: #b3b3b3; color: white; }
+            button { cursor: pointer; background-color: cornflowerblue; display: block; margin: auto; padding: 10px; background-color: cornflowerblue;
+            color: white; text-decoration: none; margin-top: 10px; }
+            button:hover { cursor: pointer; background-color: #4881ea; }
+            label { color: grey; font-size: medium; }
+            #add_secret_form li { color: red; list-style-type: none; }
+            #add_secret_form ul { padding:0; margin:5px; font-weight:bold; }
+            .success { color:green; }
+            .error { color:red; }
+            .secretFormMessage { width:fit-content; font-size: large; }
+        </style>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
