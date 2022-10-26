@@ -60,7 +60,7 @@ class SecretService
             $currentDate = new \DateTimeImmutable('@'.strtotime('now'));
             if($secretEntity->getRemainingViews()==0) {
                 return 'Secret has no more views!';
-            } else if($secretEntity->getExpiresAt() < $currentDate->format('Y-m-d H:i:s') 
+            } else if($secretEntity->getExpiresAt()->format('Y-m-d H:i:s') < $currentDate->format('Y-m-d H:i:s') 
             && $secretEntity->getExpiresAt()!=$secretEntity->getCreatedAt()) {
                 return "Secret has expired!";
             }
